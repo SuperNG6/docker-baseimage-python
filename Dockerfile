@@ -6,7 +6,7 @@ ARG S6_VER=2.0.0.1
 ENV TZ=Asia/Shanghai TASK=1d PUID=1026 PGID=100 UMASK=022
 
 # install subfinder
-RUN apt -y update && apt -y install wget curl tzdata \
+RUN apt -y update && apt -y install wget curl tzdata git \
 # install s6-overlay
 &&  if [ "$(uname -m)" = "x86_64" ];then s6_arch=amd64;elif [ "$(uname -m)" = "aarch64" ];then s6_arch=aarch64;elif [ "$(uname -m)" = "armv7l" ];then s6_arch=arm; fi  \
 &&  wget --no-check-certificate https://github.com/just-containers/s6-overlay/releases/download/v${S6_VER}/s6-overlay-${s6_arch}.tar.gz  \

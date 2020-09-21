@@ -13,6 +13,7 @@ RUN apk update && apk add --no-cache bash curl wget curl tzdata \
 &&  tar -xvzf s6-overlay-${s6_arch}.tar.gz  \
 &&  rm s6-overlay-${s6_arch}.tar.gz \
 &&  rm -rf /var/cache/apk/* /tmp/* \
+# create abc user
 &&  useradd -u 1000 -U -d /config -s /bin/false abc \
 &&  usermod -G users abc  
 

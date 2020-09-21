@@ -1,4 +1,4 @@
-FROM python:3.7.6-alpine3.12
+FROM python:3.7.6-alpine3.11
 
 # set label
 LABEL maintainer="NG6"

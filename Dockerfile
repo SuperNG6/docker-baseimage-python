@@ -1,4 +1,4 @@
-FROM python:3.7.6-slim-buster
+FROM python:3.7.6
 
 # set label
 LABEL maintainer="NG6"

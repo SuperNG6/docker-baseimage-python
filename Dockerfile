@@ -1,9 +1,9 @@
-FROM python:3.7.6-slim-buster
+FROM python:3.10-slim-bullseye
 
 # set label
 LABEL maintainer="NG6"
-ARG S6_VER=2.0.0.1
-ENV TZ=Asia/Shanghai TASK=1d PUID=1026 PGID=100 UMASK=022
+ARG S6_VER=3.1.1.2
+ENV TZ=Asia/Shanghai PUID=1026 PGID=100 UMASK=022
 
 # install subfinder
 RUN apt -y update && apt -y install wget curl tzdata \
